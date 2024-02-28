@@ -15,7 +15,7 @@ from colorama import Fore
 from pystyle import Center, Colors, Colorate
 import time
 
-os.system(f"title Kichi779 - Spotify Streaming bot v1 ")
+os.system(f"title KaiKai - Spotify Streaming bot ")
 
 url = "https://github.com/Kichi779/Spotify-Streaming-Bot/"
 
@@ -35,7 +35,7 @@ def check_for_updates():
 
 def print_announcement():
     try:
-        r = requests.get("https://raw.githubusercontent.com/Kichi779/Spotify-Streaming-Bot/main/announcement.txt", headers={"Cache-Control": "no-cache"})
+        r = requests.get("https://raw.githubusercontent.com/KaiiiKai/bott/main/announcement.txt", headers={"Cache-Control": "no-cache"})
         announcement = r.content.decode('utf-8').strip()
         return announcement
     except:
@@ -59,20 +59,20 @@ def main():
     if not check_for_updates():
         return
     announcement = print_announcement()
-    print(Colorate.Vertical(Colors.white_to_black, Center.XCenter("""
+    print(Colorate.Vertical(Colors.red_to_black, Center.XCenter("""
            
 
-               ██╗░░██╗░█████╗░██╗██╗░░██╗░█████╗░██╗
-               ██║░██╔╝██╔══██╗██║██║░██╔╝██╔══██╗██║
-               █████═╝░███████║██║█████═╝░███████║██║
-               ██╔═██╗░██╔══██║██║██╔═██╗░██╔══██║██║
-               ██║░╚██╗██║░░██║██║██║░╚██╗██║░░██║██║
-               ╚═╝░░╚═╝╚═╝░░╚═╝╚═╝╚═╝░░╚═╝╚═╝░░╚═╝╚═╝
+  ██╗░░██╗░█████╗░██╗██╗░░██╗░█████╗░██╗
+  ██║░██╔╝██╔══██╗██║██║░██╔╝██╔══██╗██║
+  █████═╝░███████║██║█████═╝░███████║██║
+  ██╔═██╗░██╔══██║██║██╔═██╗░██╔══██║██║
+  ██║░╚██╗██║░░██║██║██║░╚██╗██║░░██║██║
+  ╚═╝░░╚═╝╚═╝░░╚═╝╚═╝╚═╝░░╚═╝╚═╝░░╚═╝╚═╝
                                                                     
-                        Made by KaiKai    """)))
+              Made by KaiKai    """)))
     print("")
-    print(Colors.red, Center.XCenter("ANNOUNCEMENT"))
-    print(Colors.yellow, Center.XCenter(f"{announcement}"))
+    print(Colorate.Vertical(Colors.red_to_black, Center.XCenter("ANNOUNCEMENT")))
+    print(Colorate.Vertical(Colors.red_to_black, Center.XCenter(f"{announcement}")))
     print("")
 
     user_agents = [
@@ -125,15 +125,8 @@ def main():
 
     proxies = []
 
-    use_proxy = input(Colorate.Vertical(Colors.green_to_blue, "Do you want to use proxies? (y/n):"))
 
-    if use_proxy.lower() == 'y':
-        print(Colors.red, Center.XCenter("The proxy system will be added after 50 stars. I continue to process without a proxy"))
-        with open('proxy.txt', 'r') as file:
-            proxies = file.readlines()
-        time.sleep(3)
-
-    spotify_song = input(Colorate.Vertical(Colors.green_to_blue, "Enter the Spotify song URL (e.g https://open.spotify.com/track/5hFkGfx038V0LhqI0Uff2J?si=bf290dcc9a994c36):"))
+    spotify_song = input(Colorate.Vertical(Colors.red_to_black, "Enter the Spotify song/playlist URL:"))
 
     drivers = []
 
@@ -202,7 +195,7 @@ def main():
 
             time.sleep(1)
 
-            print(Colors.green, "Username: {} - Listening process has started.".format(username))
+            print(Colorate.Vertical(Colors.red_to_black, "Username: {} - Listening process has started.".format(username)))
 
         except Exception as e:
             print(Colors.red, "An error occurred in the bot system:", str(e))
@@ -218,7 +211,7 @@ def main():
 
         time.sleep(5)
 
-    print(Colors.blue, "Stream operations are completed. You can stop all transactions by closing the program.")
+    print(Colorate.Vertical(Colors.red_to_black, "Stream operations are completed. You can stop them by closing the program."))
 
     while True:
         pass
@@ -227,24 +220,9 @@ if __name__ == "__main__":
     main()
 
 
+    
+
+
 # ==========================================
-# Copyright 2023 Kichi779
-
-# Permission is hereby granted, free of charge, to any person obtaining a copy
-# of this software and associated documentation files (the "Software"), to deal
-# in the Software without restriction, including without limitation the rights
-# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-# copies of the Software, and to permit persons to whom the Software is
-# furnished to do so, subject to the following conditions:
-
-# The above copyright notice and this permission notice shall be included in all
-# copies or substantial portions of the Software.
-
-# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY
-# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-# SOFTWARE.
+# Made by KaiKai
 # ==========================================
