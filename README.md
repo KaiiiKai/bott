@@ -5,11 +5,12 @@
 
 
 - **Python must be installed (https://www.python.org/downloads/)**
-
+- **Run install.bat**
 
 ## Usage 
 
 - **Use format "email:password" line by line in the accounts.txt file.**
+
 
 - **run the "run.bat" file.**
 
